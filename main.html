@@ -9,15 +9,19 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-   
+    // Check if the array has fewer than two elements or all elements are the same
     if (arr.length < 2 || new Set(arr).size === 1) {
-        console.log("-Infinity");
+        return -Infinity;
     }
+
+    // Sort the array in descending order
     arr.sort(function(a, b) {
-        return b-a;
+        return b - a;
     });
-    return arr[1]; 
-}  
+
+    // Return the second element (index 1) which is the second highest
+    return arr[1];
+}
 
 function Main() {
     var n = prompt("Enter the number of elements");
